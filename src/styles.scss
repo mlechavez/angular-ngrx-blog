@@ -10,12 +10,37 @@ $black-50: rgba(13, 16, 11, 50%);
 $black-25: rgba(13, 16, 11, 25%);
 $black-10: rgba(13, 16, 11, 10%);
 
-h1 {
+h1,
+.h1 {
   font-size: 101px;
   line-height: 1.41;
 }
 
-h2 {
+h2,
+.h2 {
   font-size: 72px;
+  line-height: 1.41;
+}
+
+h3,
+.h3 {
+  font-size: 51px;
+  line-height: 1.41;
+}
+
+h4,
+.h4 {
+  font-size: 26px;
+  line-height: 1.41;
+}
+h5,
+.h5 {
+  font-size: 25px;
+  line-height: 1.41;
+}
+h6,
+.h6,
+p {
+  font-size: 18px;
   line-height: 1.41;
 }
