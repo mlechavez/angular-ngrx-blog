@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+$primary: #1f5266;
+$secondary: #0080b3;
+$gradient: linear-gradient($primary, $secondary);
+
+$white: #fff;
+$black: #0d100b;
+$black-75: rgba(13, 16, 11, 75%);
+$black-50: rgba(13, 16, 11, 50%);
+$black-25: rgba(13, 16, 11, 25%);
+$black-10: rgba(13, 16, 11, 10%);
+
+h1 {
+  font-size: 101px;
+  line-height: 1.41;
+}
+
+h2 {
+  font-size: 72px;
+  line-height: 1.41;
+}

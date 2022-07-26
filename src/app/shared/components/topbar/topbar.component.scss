@@ -1,0 +1,76 @@
+@import "../../../../styles.scss";
+
+.topbar {
+  background-color: $primary;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+
+  .left {
+    a.brand {
+      color: inherit;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  .center {
+    .search-bar {
+      border: 1px solid;
+      padding: 8px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 400px;
+
+      input {
+        flex: 1;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: inherit;
+        letter-spacing: 1px;
+
+        &:focus {
+        }
+      }
+
+      ::placeholder {
+        color: inherit;
+      }
+
+      :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: inherit;
+      }
+
+      ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: inherit;
+      }
+
+      .icon {
+        color: $black;
+      }
+    }
+  }
+
+  .right {
+    .menu-list {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+
+      .menu-item a {
+        color: inherit;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
