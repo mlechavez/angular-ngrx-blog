@@ -1,0 +1,40 @@
+@import "../../../../styles.scss";
+
+.newsletter {
+  background-color: $primary;
+  color: $white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px;
+
+  h5 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+
+  form {
+    width: 750px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    input {
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    button {
+      background-color: $secondary;
+      text-transform: uppercase;
+      border: none;
+      outline: none;
+      border-radius: 8px;
+      padding: 20px;
+      color: inherit;
+    }
+  }
+}

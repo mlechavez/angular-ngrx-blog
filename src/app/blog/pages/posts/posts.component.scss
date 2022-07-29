@@ -1,0 +1,67 @@
+@import "../../../../styles.scss";
+
+.posts {
+  .banner {
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+
+    img {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    h1 {
+      color: $white;
+      -webkit-text-stroke: 1px;
+      -webkit-text-stroke-color: $secondary;
+    }
+  }
+
+  .content {
+    display: flex;
+    padding: 60px 15px;
+    gap: 20px;
+
+    .left {
+      flex: 9;
+    }
+
+    .right {
+      flex: 3;
+
+      .widget {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .title {
+          width: 100%;
+          border-top: 1px solid $secondary;
+          border-bottom: 1px solid $secondary;
+          padding: 15px 0;
+          margin-bottom: 5px;
+          text-align: center;
+          font-size: 25px;
+          text-transform: uppercase;
+        }
+
+        img {
+          width: 300px;
+          height: 300px;
+          border-radius: 50%;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

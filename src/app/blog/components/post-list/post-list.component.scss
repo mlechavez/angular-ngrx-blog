@@ -1,0 +1,11 @@
+.post-list {
+  h3 {
+    margin-bottom: 20px;
+  }
+  .cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}

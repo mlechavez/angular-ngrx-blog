@@ -1,0 +1,19 @@
+<div class="post-card">
+  <a [routerLink]="item?.link"
+    ><img class="post-card__image" [src]="item?.image" alt=""
+  /></a>
+  <div class="body">
+    <p class="category">{{ item?.category }}</p>
+    <div class="author-date">
+      <span><b>Author:</b> {{ item?.author }}</span>
+      <span><b>Posted on:</b> {{ item?.postedOn }}</span>
+    </div>
+    <div class="content">
+      <h4>
+        <a [routerLink]="item?.link">{{ item?.title }}</a>
+      </h4>
+      <p>{{ item?.summary }}</p>
+      <a [routerLink]="item?.link">Read more...</a>
+    </div>
+  </div>
+</div>

@@ -5,8 +5,18 @@ import { SiteLayoutComponent } from './shared/layouts/site-layout/site-layout.co
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () =>
-      import('./features/posts/posts.module').then((m) => m.PostsModule),
+    component: SiteLayoutComponent,
+    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
+  },
+  {
+    path: 'blog',
+    component: SiteLayoutComponent,
+    loadChildren: () => import('./blog/blog.module').then((m) => m.PostsModule),
+  },
+  {
+    path: '',
+    redirectTo: '',
+    pathMatch: 'full',
   },
 ];
 

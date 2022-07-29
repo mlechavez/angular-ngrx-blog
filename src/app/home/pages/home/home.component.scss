@@ -1,0 +1,17 @@
+@import "src/styles.scss";
+
+.home {
+  .content {
+    display: flex;
+    padding: 60px 15px;
+    gap: 20px;
+
+    .left {
+      flex: 3;
+    }
+
+    .right {
+      flex: 1;
+    }
+  }
+}

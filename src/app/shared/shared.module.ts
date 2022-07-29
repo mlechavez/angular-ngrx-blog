@@ -1,20 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TopbarComponent } from './components/topbar/topbar.component';
 import { FormsModule } from '@angular/forms';
-import { SiteLayoutComponent } from './layouts/site-layout/site-layout.component';
-import { RouterModule, Routes } from '@angular/router';
-import { FooterComponent } from './components/footer/footer.component';
+import { RouterModule } from '@angular/router';
+
+import { CardComponent, NewsletterComponent } from './components';
+import {
+  SiteLayoutComponent,
+  TopbarComponent,
+  FooterComponent,
+} from './layouts';
+
+const components = [
+  TopbarComponent,
+  SiteLayoutComponent,
+  FooterComponent,
+  CardComponent,
+  NewsletterComponent,
+];
 
 @NgModule({
-  declarations: [TopbarComponent, SiteLayoutComponent, FooterComponent],
+  declarations: [components],
   imports: [CommonModule, RouterModule],
-  exports: [
-    CommonModule,
-    FormsModule,
-    TopbarComponent,
-    SiteLayoutComponent,
-    FooterComponent,
-  ],
+  exports: [CommonModule, FormsModule, components],
 })
 export class SharedModule {}
