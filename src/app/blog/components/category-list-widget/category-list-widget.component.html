@@ -1,7 +1,7 @@
 <div class="category-list-widget">
   <div class="title">Categories</div>
 
-  <ul class="category-list" *ngIf="postCategories$ | async as postCategories">
+  <ul class="category-list" *ngIf="postCategories">
     <li *ngFor="let cat of postCategories" class="category-list-item">
       <a [routerLink]="['/blog']" [queryParams]="{ category: cat.name }">{{
         cat.name

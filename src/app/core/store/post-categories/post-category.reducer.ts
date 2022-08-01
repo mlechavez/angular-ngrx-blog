@@ -1,13 +1,18 @@
 import { Action, createReducer, on } from '@ngrx/store';
 import { PostCategory } from '../../models/post-category.model';
-import { getPostCategoriesSuccess } from './post-category.actions';
+import {
+  getPostCategoriesFail,
+  getPostCategoriesSuccess,
+} from './post-category.actions';
 
 export interface PostCategoriesState {
   list: PostCategory[];
+  errorMessage: string;
 }
 
 const initialState: PostCategoriesState = {
   list: [],
+  errorMessage: '',
 };
 
 export const _postCategoryReducer = createReducer(
@@ -16,6 +21,12 @@ export const _postCategoryReducer = createReducer(
     return {
       ...state,
       list: action.response.data,
+    };
+  }),
+  on(getPostCategoriesFail, (state, action) => {
+    return {
+      ...state,
+      errorMessage: action.message,
     };
   })
 );

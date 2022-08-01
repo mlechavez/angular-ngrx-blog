@@ -4,14 +4,12 @@ import { SharedModule } from '../shared';
 
 import {
   CategoryListWidgetComponent,
-  PostListComponent,
   RelatedPostComponent,
 } from './components';
 import { PostsComponent, SinglePostComponent } from './pages';
 
 @NgModule({
   declarations: [
-    PostListComponent,
     PostsComponent,
     SinglePostComponent,
     RelatedPostComponent,

@@ -1,181 +1,30 @@
-<div class="single-post">
+<div class="single-post" *ngIf="post$ | async as post">
   <div class="featured-image">
-    <img
-      src="https://images.pexels.com/photos/10647543/pexels-photo-10647543.jpeg"
-      alt=""
-    />
-    <h3>Title</h3>
+    <img [src]="post?.image" alt="{{ post?.title }}" />
+    <h3>{{ post?.title }}</h3>
   </div>
   <div class="content">
     <div class="left">
       <div class="post-info">
-        <span><b>Author:</b> Lester</span>
-        <span><b>Posted On:</b> 1/1/2022</span>
+        <span><b>Author:</b> {{ post?.author?.name }}</span>
+        <span><b>Posted On:</b> {{ post?.publishedDate }} </span>
       </div>
       <div class="post-content">
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint officia
-          nam amet minima aliquid! Vel odio aut repellendus, illo excepturi
-          deleniti illum distinctio quod quis eum facere itaque eaque alias iure
-          molestias error temporibus beatae doloribus, reiciendis voluptatum
-          eius nisi! Quam, iure ducimus dolore impedit unde aut ipsum quidem
-          praesentium tempora, reiciendis sequi rem consequuntur culpa
-          accusantium ratione ipsa, est porro laudantium. Quidem repellendus
-          nisi voluptatem voluptatum provident impedit iure eaque unde
-          voluptates fuga, eius ea odio atque vel quasi non! Assumenda culpa
-          molestias voluptatibus voluptatem suscipit nihil quidem libero
-          facilis, placeat similique vel iste, cum minima nobis natus facere?
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint officia
-          nam amet minima aliquid! Vel odio aut repellendus, illo excepturi
-          deleniti illum distinctio quod quis eum facere itaque eaque alias iure
-          molestias error temporibus beatae doloribus, reiciendis voluptatum
-          eius nisi! Quam, iure ducimus dolore impedit unde aut ipsum quidem
-          praesentium tempora, reiciendis sequi rem consequuntur culpa
-          accusantium ratione ipsa, est porro laudantium. Quidem repellendus
-          nisi voluptatem voluptatum provident impedit iure eaque unde
-          voluptates fuga, eius ea odio atque vel quasi non! Assumenda culpa
-          molestias voluptatibus voluptatem suscipit nihil quidem libero
-          facilis, placeat similique vel iste, cum minima nobis natus facere?
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint officia
-          nam amet minima aliquid! Vel odio aut repellendus, illo excepturi
-          deleniti illum distinctio quod quis eum facere itaque eaque alias iure
-          molestias error temporibus beatae doloribus, reiciendis voluptatum
-          eius nisi! Quam, iure ducimus dolore impedit unde aut ipsum quidem
-          praesentium tempora, reiciendis sequi rem consequuntur culpa
-          accusantium ratione ipsa, est porro laudantium. Quidem repellendus
-          nisi voluptatem voluptatum provident impedit iure eaque unde
-          voluptates fuga, eius ea odio atque vel quasi non! Assumenda culpa
-          molestias voluptatibus voluptatem suscipit nihil quidem libero
-          facilis, placeat similique vel iste, cum minima nobis natus facere?
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint officia
-          nam amet minima aliquid! Vel odio aut repellendus, illo excepturi
-          deleniti illum distinctio quod quis eum facere itaque eaque alias iure
-          molestias error temporibus beatae doloribus, reiciendis voluptatum
-          eius nisi! Quam, iure ducimus dolore impedit unde aut ipsum quidem
-          praesentium tempora, reiciendis sequi rem consequuntur culpa
-          accusantium ratione ipsa, est porro laudantium. Quidem repellendus
-          nisi voluptatem voluptatum provident impedit iure eaque unde
-          voluptates fuga, eius ea odio atque vel quasi non! Assumenda culpa
-          molestias voluptatibus voluptatem suscipit nihil quidem libero
-          facilis, placeat similique vel iste, cum minima nobis natus facere?
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint officia
-          nam amet minima aliquid! Vel odio aut repellendus, illo excepturi
-          deleniti illum distinctio quod quis eum facere itaque eaque alias iure
-          molestias error temporibus beatae doloribus, reiciendis voluptatum
-          eius nisi! Quam, iure ducimus dolore impedit unde aut ipsum quidem
-          praesentium tempora, reiciendis sequi rem consequuntur culpa
-          accusantium ratione ipsa, est porro laudantium. Quidem repellendus
-          nisi voluptatem voluptatum provident impedit iure eaque unde
-          voluptates fuga, eius ea odio atque vel quasi non! Assumenda culpa
-          molestias voluptatibus voluptatem suscipit nihil quidem libero
-          facilis, placeat similique vel iste, cum minima nobis natus facere?
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint officia
-          nam amet minima aliquid! Vel odio aut repellendus, illo excepturi
-          deleniti illum distinctio quod quis eum facere itaque eaque alias iure
-          molestias error temporibus beatae doloribus, reiciendis voluptatum
-          eius nisi! Quam, iure ducimus dolore impedit unde aut ipsum quidem
-          praesentium tempora, reiciendis sequi rem consequuntur culpa
-          accusantium ratione ipsa, est porro laudantium. Quidem repellendus
-          nisi voluptatem voluptatum provident impedit iure eaque unde
-          voluptates fuga, eius ea odio atque vel quasi non! Assumenda culpa
-          molestias voluptatibus voluptatem suscipit nihil quidem libero
-          facilis, placeat similique vel iste, cum minima nobis natus facere?
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint officia
-          nam amet minima aliquid! Vel odio aut repellendus, illo excepturi
-          deleniti illum distinctio quod quis eum facere itaque eaque alias iure
-          molestias error temporibus beatae doloribus, reiciendis voluptatum
-          eius nisi! Quam, iure ducimus dolore impedit unde aut ipsum quidem
-          praesentium tempora, reiciendis sequi rem consequuntur culpa
-          accusantium ratione ipsa, est porro laudantium. Quidem repellendus
-          nisi voluptatem voluptatum provident impedit iure eaque unde
-          voluptates fuga, eius ea odio atque vel quasi non! Assumenda culpa
-          molestias voluptatibus voluptatem suscipit nihil quidem libero
-          facilis, placeat similique vel iste, cum minima nobis natus facere?
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint officia
-          nam amet minima aliquid! Vel odio aut repellendus, illo excepturi
-          deleniti illum distinctio quod quis eum facere itaque eaque alias iure
-          molestias error temporibus beatae doloribus, reiciendis voluptatum
-          eius nisi! Quam, iure ducimus dolore impedit unde aut ipsum quidem
-          praesentium tempora, reiciendis sequi rem consequuntur culpa
-          accusantium ratione ipsa, est porro laudantium. Quidem repellendus
-          nisi voluptatem voluptatum provident impedit iure eaque unde
-          voluptates fuga, eius ea odio atque vel quasi non! Assumenda culpa
-          molestias voluptatibus voluptatem suscipit nihil quidem libero
-          facilis, placeat similique vel iste, cum minima nobis natus facere?
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint officia
-          nam amet minima aliquid! Vel odio aut repellendus, illo excepturi
-          deleniti illum distinctio quod quis eum facere itaque eaque alias iure
-          molestias error temporibus beatae doloribus, reiciendis voluptatum
-          eius nisi! Quam, iure ducimus dolore impedit unde aut ipsum quidem
-          praesentium tempora, reiciendis sequi rem consequuntur culpa
-          accusantium ratione ipsa, est porro laudantium. Quidem repellendus
-          nisi voluptatem voluptatum provident impedit iure eaque unde
-          voluptates fuga, eius ea odio atque vel quasi non! Assumenda culpa
-          molestias voluptatibus voluptatem suscipit nihil quidem libero
-          facilis, placeat similique vel iste, cum minima nobis natus facere?
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint officia
-          nam amet minima aliquid! Vel odio aut repellendus, illo excepturi
-          deleniti illum distinctio quod quis eum facere itaque eaque alias iure
-          molestias error temporibus beatae doloribus, reiciendis voluptatum
-          eius nisi! Quam, iure ducimus dolore impedit unde aut ipsum quidem
-          praesentium tempora, reiciendis sequi rem consequuntur culpa
-          accusantium ratione ipsa, est porro laudantium. Quidem repellendus
-          nisi voluptatem voluptatum provident impedit iure eaque unde
-          voluptates fuga, eius ea odio atque vel quasi non! Assumenda culpa
-          molestias voluptatibus voluptatem suscipit nihil quidem libero
-          facilis, placeat similique vel iste, cum minima nobis natus facere?
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint officia
-          nam amet minima aliquid! Vel odio aut repellendus, illo excepturi
-          deleniti illum distinctio quod quis eum facere itaque eaque alias iure
-          molestias error temporibus beatae doloribus, reiciendis voluptatum
-          eius nisi! Quam, iure ducimus dolore impedit unde aut ipsum quidem
-          praesentium tempora, reiciendis sequi rem consequuntur culpa
-          accusantium ratione ipsa, est porro laudantium. Quidem repellendus
-          nisi voluptatem voluptatum provident impedit iure eaque unde
-          voluptates fuga, eius ea odio atque vel quasi non! Assumenda culpa
-          molestias voluptatibus voluptatem suscipit nihil quidem libero
-          facilis, placeat similique vel iste, cum minima nobis natus facere?
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint officia
-          nam amet minima aliquid! Vel odio aut repellendus, illo excepturi
-          deleniti illum distinctio quod quis eum facere itaque eaque alias iure
-          molestias error temporibus beatae doloribus, reiciendis voluptatum
-          eius nisi! Quam, iure ducimus dolore impedit unde aut ipsum quidem
-          praesentium tempora, reiciendis sequi rem consequuntur culpa
-          accusantium ratione ipsa, est porro laudantium. Quidem repellendus
-          nisi voluptatem voluptatum provident impedit iure eaque unde
-          voluptates fuga, eius ea odio atque vel quasi non! Assumenda culpa
-          molestias voluptatibus voluptatem suscipit nihil quidem libero
-          facilis, placeat similique vel iste, cum minima nobis natus facere?
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint officia
-          nam amet minima aliquid! Vel odio aut repellendus, illo excepturi
-          deleniti illum distinctio quod quis eum facere itaque eaque alias iure
-          molestias error temporibus beatae doloribus, reiciendis voluptatum
-          eius nisi! Quam, iure ducimus dolore impedit unde aut ipsum quidem
-          praesentium tempora, reiciendis sequi rem consequuntur culpa
-          accusantium ratione ipsa, est porro laudantium. Quidem repellendus
-          nisi voluptatem voluptatum provident impedit iure eaque unde
-          voluptates fuga, eius ea odio atque vel quasi non! Assumenda culpa
-          molestias voluptatibus voluptatem suscipit nihil quidem libero
-          facilis, placeat similique vel iste, cum minima nobis natus facere?
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint officia
-          nam amet minima aliquid! Vel odio aut repellendus, illo excepturi
-          deleniti illum distinctio quod quis eum facere itaque eaque alias iure
-          molestias error temporibus beatae doloribus, reiciendis voluptatum
-          eius nisi! Quam, iure ducimus dolore impedit unde aut ipsum quidem
-          praesentium tempora, reiciendis sequi rem consequuntur culpa
-          accusantium ratione ipsa, est porro laudantium. Quidem repellendus
-          nisi voluptatem voluptatum provident impedit iure eaque unde
-          voluptates fuga, eius ea odio atque vel quasi non! Assumenda culpa
-          molestias voluptatibus voluptatem suscipit nihil quidem libero
-          facilis, placeat similique vel iste, cum minima nobis natus facere?
+          {{ post?.content }}
         </p>
       </div>
     </div>
     <div class="right">
-      <app-category-list-widget></app-category-list-widget>
-      <app-related-post></app-related-post>
-      <app-related-post></app-related-post>
-      <app-related-post></app-related-post>
+      <app-category-list-widget
+        *ngIf="postCategories$ | async as categories"
+        [postCategories]="categories"
+      ></app-category-list-widget>
+
+      <app-post-list-card
+        *ngIf="relatedPosts$ | async as cards"
+        [cards]="cards"
+      ></app-post-list-card>
     </div>
   </div>
 </div>

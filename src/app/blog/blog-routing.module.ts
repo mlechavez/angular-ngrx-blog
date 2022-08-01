@@ -1,15 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { PostsComponent } from './pages';
-import { SinglePostComponent } from './pages/single-post/single-post.component';
+import { PostsComponent, SinglePostComponent } from './pages';
+import { SinglePostResolver } from './resolvers/single-post.resolver';
 
 const routes: Routes = [
   {
     path: '',
     children: [
-      { path: '', component: PostsComponent },
-      { path: ':month/:date/:id', component: SinglePostComponent },
+      {
+        path: '',
+        component: PostsComponent,
+      },
+      {
+        path: ':month/:date/:id',
+        component: SinglePostComponent,
+        resolve: { singlePost: SinglePostResolver },
+        runGuardsAndResolvers: 'pathParamsOrQueryParamsChange',
+      },
     ],
   },
 ];

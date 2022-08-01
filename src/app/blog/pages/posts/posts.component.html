@@ -1,11 +1,18 @@
 <div class="posts">
-  <h2>Latest Posts</h2>
+  <h2>{{ title }}</h2>
   <div class="content">
     <div class="left">
-      <app-post-list></app-post-list>
+      <app-post-list-card
+        *ngIf="postListCards$ | async as cards"
+        [title]="postListTitle"
+        [cards]="cards"
+      ></app-post-list-card>
     </div>
     <div class="right">
-      <app-category-list-widget></app-category-list-widget>
+      <app-category-list-widget
+        *ngIf="postCategories$ | async as categories"
+        [postCategories]="categories"
+      ></app-category-list-widget>
     </div>
   </div>
 </div>

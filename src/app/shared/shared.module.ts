@@ -9,6 +9,7 @@ import {
   TopbarComponent,
   FooterComponent,
 } from './layouts';
+import { PostListCardComponent } from './components/post-list-card/post-list-card.component';
 
 const components = [
   TopbarComponent,
@@ -16,6 +17,7 @@ const components = [
   FooterComponent,
   CardComponent,
   NewsletterComponent,
+  PostListCardComponent,
 ];
 
 @NgModule({

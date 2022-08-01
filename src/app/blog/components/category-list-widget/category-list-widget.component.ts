@@ -1,10 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
-import {
-  getPostCategoriesRequest,
-  selectPostCategories,
-} from 'src/app/core/store/posts-categories';
 import { AppState, PostCategory } from '../../../core';
 
 @Component({
@@ -13,12 +8,9 @@ import { AppState, PostCategory } from '../../../core';
   styleUrls: ['./category-list-widget.component.scss'],
 })
 export class CategoryListWidgetComponent implements OnInit {
-  postCategories$: Observable<PostCategory[]> | undefined;
+  @Input() postCategories: PostCategory[] | undefined;
 
   constructor(private store: Store<AppState>) {}
 
-  ngOnInit(): void {
-    this.store.dispatch(getPostCategoriesRequest());
-    this.postCategories$ = this.store.select(selectPostCategories);
-  }
+  ngOnInit(): void {}
 }

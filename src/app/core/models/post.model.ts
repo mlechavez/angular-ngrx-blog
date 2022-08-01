@@ -9,6 +9,7 @@ export interface Post {
   summary: string;
   content: string;
   published: boolean;
+  publishedDate: Date;
   category: PostCategory;
   author: User;
   createdAt: Date;
